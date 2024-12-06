@@ -11,7 +11,7 @@ func main() {
 	yearOfBirth := 2000
 	numberOfSiblings := 2
 	heightInMeters := 1.75
-	zodiacSign := '\u264E' // Beispiel für Waage
+	zodiacSign := '\u2648' // Beispiel für Waage
 
 	// Ausgabe der Informationen
 	fmt.Printf("Vor- und Nachname: %s %s\n", firstName, lastName)
