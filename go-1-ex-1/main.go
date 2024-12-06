@@ -3,7 +3,17 @@ package main
 import "fmt"
 
 func main() {
-	// TODO: Declare and initialize the variables being used in the output!
+	// Variablen deklarieren und initialisieren
+	firstName := "Max"
+	lastName := "Mustermann"
+	dayOfBirth := 1
+	monthOfBirth := 1
+	yearOfBirth := 2000
+	numberOfSiblings := 2
+	heightInMeters := 1.75
+	zodiacSign := '\u264E' // Beispiel für Waage
+
+	// Ausgabe der Informationen
 	fmt.Printf("Vor- und Nachname: %s %s\n", firstName, lastName)
 	fmt.Printf("Geburtsdatum: %d.%d.%d\n", dayOfBirth, monthOfBirth, yearOfBirth)
 	fmt.Printf("Anzahl Geschwister: %d\n", numberOfSiblings)
