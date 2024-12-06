@@ -8,6 +8,9 @@ import (
 )
 
 func main() {
+	// Seed the random number generator
+	rand.Seed(time.Now().UnixNano())
+
 	var eyes = rand.Intn(6) + 1 // Simulate a standard 6-sided die
 	var when = time.Now()
 
@@ -17,7 +20,11 @@ func main() {
 		fmt.Println("Error creating eyes.txt:", err)
 		return
 	}
-	defer eyesFile.Close() // Ensure the file is closed after writing
+	defer func() {
+		if err := eyesFile.Close(); err != nil {
+			fmt.Println("Error closing eyes.txt:", err)
+		}
+	}()
 
 	// Open dice.log for writing
 	logFile, err := os.Create("dice.log")
@@ -25,7 +32,11 @@ func main() {
 		fmt.Println("Error creating dice.log:", err)
 		return
 	}
-	defer logFile.Close() // Ensure the file is closed after writing
+	defer func() {
+		if err := logFile.Close(); err != nil {
+			fmt.Println("Error closing dice.log:", err)
+		}
+	}()
 
 	// Use fmt.Fprintln to write to eyes.txt
 	fmt.Fprintln(eyesFile, "The dice shows", eyes, "eyes")
