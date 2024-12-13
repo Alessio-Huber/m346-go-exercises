@@ -4,6 +4,14 @@ import "fmt"
 
 type FullName struct {
 	// TODO: add fields
+	FirstName string
+	LastName  string
+}
+
+type BirthDate struct {
+	DayOfBirth   byte
+	MonthOfBirth byte
+	YearOfBirth  int16
 }
 
 // TODO: declare a structure for birth date
