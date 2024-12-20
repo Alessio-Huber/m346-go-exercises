@@ -7,7 +7,7 @@ func computeGrade(gotPoints float64, maxPoints float64) float64 {
 	if maxPoints == 0 {
 		return 6.0 // Wenn die maximale Punktzahl 0 ist, geben wir die schlechteste Note zurück.
 	}
-	grade := 5/maxPoints*gotPoints + 1
+	grade := gotPoints/maxPoints*5 + 1
 	return grade
 }
 
