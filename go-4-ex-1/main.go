@@ -5,8 +5,9 @@ import "fmt"
 // computeGrade berechnet die Note basierend auf der erreichten Punktzahl und der maximalen Punktzahl.
 func computeGrade(gotPoints float64, maxPoints float64) float64 {
 	if maxPoints == 0 {
-		return 6.0 // Wenn die maximale Punktzahl 0 ist, geben wir die schlechteste Note zurück.
+		return 6.0
 	}
+
 	grade := gotPoints/maxPoints*5 + 1
 	return grade
 }
